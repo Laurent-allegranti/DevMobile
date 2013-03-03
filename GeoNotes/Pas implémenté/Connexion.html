@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Projet IHM/App mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<style>
+		body {
+			padding-top:60px;
+		}
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+       
+          
+          <h1>GeoNotes</h1>
+          
+        
+      </div>
+    </div>
+
+
+
+
+  <div class="container">
+  </br></br></br>
+	<input type="text" placeholder="Nom d'utilisateur">
+	</br>
+	<input type="text" placeholder="Mot de passe">
+	</br>
+      <p><a href="http://www.siteduzero.com" title="Cliquez si vous avez oublié votre mot de passe">Mot de passe oublié !</a> </p> 
+	</br></br></br>
+	<p>
+		<button class="btn btn-large btn-primary" type="button">Connexion</button>
+	</p>
+	
+</div>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/application.js"></script>
+						
+	<script>      
+	         $(function() {         			      
+		        //$('#action').click(function() {	
+				console.log("test");
+				        
+			        $.getJSON('serveur.php', function(data) {						
+					//var list = "";	
+					console.log("je sors du php");					
+					$.each(data , function( i, item ) {
+						console.log(item.mdp);
+						console.log(item.email);
+				       });
+				     // $("ul:jqmData(role='listview')").append( list ).listview("refresh");	
+						});  
+				//});   
+            });   
+      </script>
+
+
+  </body>
+</html>
+
+
+
+<!-- 
+Serveur Web : $ php -S 0.0.0.0:3000 
+Livereload
+== -->
